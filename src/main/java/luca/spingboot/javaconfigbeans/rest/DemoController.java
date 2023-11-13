@@ -12,8 +12,22 @@ public class DemoController {
 
     public DemoController(@Qualifier("aquatic") Coach theCoach) {
 
+        //to print post construct and pre destroy
+        //@Qualifier("cricketCoach") Coach theCoach) {
+        //    System.out.println("In constructor: " + getClass().getSimpleName());
         myCoach = theCoach;
     }
+
+
+
+    //@Autowired  //this would create 2 different instances hence 2 different memory allocations
+    //public DemoController(
+    //      @Qualifier("cricketCoach") Coach theCoach,
+    //      @Qualifier("cricketCoach") Coach theAnotherCoach) {
+    //   System.out.println("In constructor: " + getClass().getSimpleName());
+    //    myCoach = theCoach;
+    //    anotherCoach = theAnotherCoach;
+    // }
 
     @GetMapping("/dailyworkout")
     public String getDailyWorkout() {
