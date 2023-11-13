@@ -8,7 +8,7 @@ public class TrackCoach implements Coach {
 
     public TrackCoach() {
 
-        System.out.println("Inconstructor: " + getClass().getSimpleName());
+        System.out.println("In constructor: " + getClass().getSimpleName());
     }
 
     @Override
